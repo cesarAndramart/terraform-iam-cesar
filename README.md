@@ -127,13 +127,15 @@ Json Policy:
    - Try to **upload** or **delete** objects in `/public/`. It should fail.  
 ![evidencia1](https://github.com/user-attachments/assets/2dadf4db-d6af-4ed3-aff8-822d0eebf90d)
 
-2. **Admin user** (`admin-s3`):  
+2. **Admin user** (`admin-s3`):
+   ![evidencia 4](https://github.com/user-attachments/assets/ac906544-a2b0-47c3-bf9d-bf4d9287ad22)
+
    - **List** and **read** all objects.  
    - **Upload** an object to `/private/`. It should succeed.  
    - **Delete** an object in `/public/`. It should succeed.  
 ![evidencia 2](https://github.com/user-attachments/assets/eebcd643-b66b-4ec4-93fe-1763c38c4b4e)
 
-3. **EC2 instance with role `EC2S3ReadOnlyRole`**:  
+4. **EC2 instance with role `EC2S3ReadOnlyRole`**:  
    - Connect to the EC2 instance (via SSH or Session Manager).  
    - Run the following commands:  
      ```bash
@@ -144,6 +146,8 @@ Json Policy:
    - Verify that **downloading** works without issues.  
    - Try to **upload** a file (e.g., `aws s3 cp localfile.txt s3://bucket-lab-iam/private/`) and confirm that it fails due to insufficient permissions.  
 ![evidencia3](https://github.com/user-attachments/assets/3d714f7d-c9d4-4dd5-a372-d79e4bfd1d0b)
+![evidencia 5](https://github.com/user-attachments/assets/747550c6-6f4f-4365-b311-6eaf1448f147)
+![evidencia 6](https://github.com/user-attachments/assets/37a59357-f489-41eb-aad0-66fe6eba286e)
 
 # Exercise 2: Terraform IAM Lambda
 
